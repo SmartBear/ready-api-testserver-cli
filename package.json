@@ -1,0 +1,13 @@
+{
+  "name": "rats4node",
+  "version": "1.0.0",
+  "description": "ReadyAPI TestServer Node Client",
+  "scripts": {
+    "test": "no tests specified"
+  },
+  "author": "",
+  "license": "ASL",
+  "preferGlobal": true,
+  "bin": {
+    "rats": "rats.js"
+  }}
