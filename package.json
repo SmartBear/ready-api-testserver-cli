@@ -9,5 +9,10 @@
   "license": "ASL",
   "preferGlobal": true,
   "bin": {
-    "rats": "rats.js"
-  }}
+    "rats": "bin/rats.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "superagent": "^1.6.1"
+  }
+}

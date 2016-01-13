@@ -1,0 +1,9 @@
+{
+  "testSteps": [
+    {
+      "type": "REST Request",
+      "method": "GET",
+      "URI": "https://api.swaggerhub.com/apis"
+    }
+  ]
+}
