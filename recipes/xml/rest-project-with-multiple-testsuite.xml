@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d37be10a-62ca-4181-973b-f63a27c55ab8" activeEnvironment="Default environment" name="RESTProjectWithSampleTestCase" resourceRoot="" soapui-version="6.0.0" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+    <con:interface xsi:type="con:RestService" id="cdbbad1d-2529-43ce-a9b9-149e230ceba2" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://maps.googleapis.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        <con:definitionCache type="TEXT" rootPart=""/>
+        <con:endpoints>
+            <con:endpoint>http://localhost:8080/</con:endpoint>
+            <con:endpoint>http://maps.googleapis.com</con:endpoint>
+        </con:endpoints>
+        <con:resource name="Xml" path="/maps/api/geocode/xml" id="2f6af94e-12f7-403f-b62c-e4823d58043f">
+            <con:settings/>
+            <con:parameters>
+                <con:parameter>
+                    <con:name>address</con:name>
+                    <con:value>1600 Amphitheatre Parkway, Mountain View, CA</con:value>
+                    <con:style>QUERY</con:style>
+                    <con:default>1600 Amphitheatre Parkway, Mountain View, CA</con:default>
+                    <con:path xsi:nil="true"/>
+                    <con:description xsi:nil="true"/>
+                </con:parameter>
+                <con:parameter>
+                    <con:name>sensor</con:name>
+                    <con:value>false</con:value>
+                    <con:style>QUERY</con:style>
+                    <con:default>false</con:default>
+                    <con:path xsi:nil="true"/>
+                    <con:description xsi:nil="true"/>
+                </con:parameter>
+            </con:parameters>
+            <con:method name="Xml" id="76625753-f088-482a-b050-0168d68bb4bf" method="GET">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/xml; charset=UTF-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element>GeocodeResponse</con:element>
+                </con:representation>
+                <con:request name="Request 1" id="ceca9551-15e9-455d-99c7-24f93b7da84d" mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8080/</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://maps.googleapis.com/maps/api/geocode/xml</con:originalUri>
+                    <con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:parameters>
+                        <con:entry key="address" value="1600 Amphitheatre Parkway, Mountain View, CA"/>
+                        <con:entry key="sensor" value="false"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>address</con:entry>
+                        <con:entry>sensor</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+        </con:resource>
+    </con:interface>
+    <con:interface xsi:type="con:RestService" id="bae63e36-8cba-48eb-b617-dfcf67114242" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://maps.googleapis.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <con:settings/>
+        <con:definitionCache type="TEXT" rootPart=""/>
+        <con:endpoints>
+            <con:endpoint>http://localhost:8080/</con:endpoint>
+            <con:endpoint>http://maps.googleapis.com</con:endpoint>
+        </con:endpoints>
+        <con:resource name="Json" path="/maps/api/geocode/json" id="f59e65e6-27b9-4d07-b5bf-dadc261b7327">
+            <con:settings/>
+            <con:parameters>
+                <con:parameter>
+                    <con:name>address</con:name>
+                    <con:value>1600 Amphitheatre Parkway, Mountain View, CA</con:value>
+                    <con:style>QUERY</con:style>
+                    <con:default>1600 Amphitheatre Parkway, Mountain View, CA</con:default>
+                    <con:path xsi:nil="true"/>
+                    <con:description xsi:nil="true"/>
+                </con:parameter>
+                <con:parameter>
+                    <con:name>sensor</con:name>
+                    <con:value>false</con:value>
+                    <con:style>QUERY</con:style>
+                    <con:default>false</con:default>
+                    <con:path xsi:nil="true"/>
+                    <con:description xsi:nil="true"/>
+                </con:parameter>
+            </con:parameters>
+            <con:method name="Json" id="6083f65d-3ff3-4bcc-a475-e47fbe9e5d9b" method="GET">
+                <con:settings/>
+                <con:parameters/>
+                <con:representation type="RESPONSE">
+                    <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+                    <con:status>200</con:status>
+                    <con:params/>
+                    <con:element xmlns:json="http://maps.googleapis.com/maps/api/geocode/json">json:Response
+                    </con:element>
+                </con:representation>
+                <con:request name="Request 1" id="bf750222-70e3-4aa8-9eb4-80de7d2e7bcb" mediaType="application/json">
+                    <con:settings>
+                        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                        </con:setting>
+                    </con:settings>
+                    <con:endpoint>http://localhost:8080/</con:endpoint>
+                    <con:request/>
+                    <con:originalUri>http://maps.googleapis.com/maps/api/geocode/json</con:originalUri>
+                    <con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials>
+                    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                    <con:parameters>
+                        <con:entry key="address" value="1600 Amphitheatre Parkway, Mountain View, CA"/>
+                        <con:entry key="sensor" value="false"/>
+                    </con:parameters>
+                    <con:parameterOrder>
+                        <con:entry>address</con:entry>
+                        <con:entry>sensor</con:entry>
+                    </con:parameterOrder>
+                </con:request>
+            </con:method>
+        </con:resource>
+    </con:interface>
+    <con:testSuite id="784d3c3d-a758-4cea-80fb-b300f03b7efb" name="TestSuite1">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="08718298-e12f-4922-a183-35b9336e8fe2" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase1" searchProperties="true">
+            <con:settings/>
+            
+            <con:testStep type="groovy" name="Groovy Script" id="7317528c-aa6c-4368-943e-0f63dd5824e9"><con:settings/><con:config><script>true</script></con:config></con:testStep><con:properties/>
+            <con:reportParameters/>
+        </con:testCase>
+        <con:testCase id="2ecf63bb-9a76-49bb-a00d-330014d97bbd" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase2" searchProperties="true">
+            <con:settings/>
+            
+            <con:testStep type="groovy" name="Groovy Script" id="942cc407-e57a-422e-a7eb-0ba6c70fe2ca"><con:settings/><con:config><script>true</script></con:config></con:testStep><con:properties/>
+            <con:reportParameters/>
+        </con:testCase>
+        <con:properties/>
+        <con:reportParameters/>
+    </con:testSuite>
+    <con:testSuite id="6eaf1c3b-34d8-4039-af36-ea8efda66978" name="TestSuite2">
+        <con:settings/>
+        <con:runType>SEQUENTIAL</con:runType>
+        <con:testCase id="3c722480-0df2-442d-99e4-955fc4350ad8" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase1" searchProperties="true">
+            <con:settings/>
+            
+            <con:testStep type="groovy" name="Groovy Script" id="3303a8fe-1ebd-4a3a-a7a9-78a2d7f07ee1"><con:settings/><con:config><script>true</script></con:config></con:testStep><con:properties/>
+            <con:reportParameters/>
+        </con:testCase>
+        <con:testCase id="bd4914dc-8776-4f43-ac65-99649a42bbba" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase2" searchProperties="true">
+            <con:settings/>
+            <con:testStep type="groovy" name="Groovy Script" id="64d0f803-9aa5-44d9-83ff-64dcb7a2ea16"><con:settings/><con:config><script>true</script></con:config></con:testStep>
+            <con:properties/>
+            <con:reportParameters/>
+        </con:testCase>
+        <con:properties/>
+        <con:reportParameters/>
+    </con:testSuite>
+    <con:restMockService id="8fa28341-92fc-4d42-97c2-8972fabbab31" port="8080" path="/" host="LPTWRK-PRAKASH" name="Virt 1">
+        <con:settings/>
+        <con:properties/>
+        <con:constraints>
+            <con:congestion>0</con:congestion>
+            <con:inputBandwidth>-1</con:inputBandwidth>
+            <con:outputBandwidth>-1</con:outputBandwidth>
+            <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+            <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+            <con:virtError>
+                <con:start>0</con:start>
+                <con:endless>true</con:endless>
+            </con:virtError>
+        </con:constraints>
+        <con:headerValidator type="NONE"/>
+        <con:restMockAction name="/maps/api/geocode/xml" method="GET" resourcePath="/maps/api/geocode/xml" id="b6b59a2b-4fb8-41aa-9017-cb6d73843ee6">
+            <con:settings/>
+            <con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+            <con:dispatchConfig/>
+            <con:dispatchXPath/>
+            <con:response name="Response 1" id="509646fd-be99-466e-989d-501746fafab3" httpResponseStatus="200" mediaType="application/xml" encoding="UTF-8" dataSource="">
+                <con:settings/>
+                <con:responseContent><![CDATA[<GeocodeResponse>
+   <status>OK</status>
+   <result>
+      <type>street_address</type>
+      <formatted_address>1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA</formatted_address>
+      <address_component>
+         <long_name>1600</long_name>
+         <short_name>1600</short_name>
+         <type>street_number</type>
+      </address_component>
+      <address_component>
+         <long_name>Amphitheatre Parkway</long_name>
+         <short_name>Amphitheatre Pkwy</short_name>
+         <type>route</type>
+      </address_component>
+      <address_component>
+         <long_name>Mountain View</long_name>
+         <short_name>Mountain View</short_name>
+         <type>locality</type>
+         <type>political</type>
+      </address_component>
+      <address_component>
+         <long_name>Santa Clara County</long_name>
+         <short_name>Santa Clara County</short_name>
+         <type>administrative_area_level_2</type>
+         <type>political</type>
+      </address_component>
+      <address_component>
+         <long_name>California</long_name>
+         <short_name>CA</short_name>
+         <type>administrative_area_level_1</type>
+         <type>political</type>
+      </address_component>
+      <address_component>
+         <long_name>United States</long_name>
+         <short_name>US</short_name>
+         <type>country</type>
+         <type>political</type>
+      </address_component>
+      <address_component>
+         <long_name>94043</long_name>
+         <short_name>94043</short_name>
+         <type>postal_code</type>
+      </address_component>
+      <geometry>
+         <location>
+            <lat>37.4220352</lat>
+            <lng>-122.0841244</lng>
+         </location>
+         <location_type>ROOFTOP</location_type>
+         <viewport>
+            <southwest>
+               <lat>37.4206862</lat>
+               <lng>-122.0854734</lng>
+            </southwest>
+            <northeast>
+               <lat>37.4233842</lat>
+               <lng>-122.0827754</lng>
+            </northeast>
+         </viewport>
+      </geometry>
+      <place_id>ChIJ2eUgeAK6j4ARbn5u_wAGqWA</place_id>
+   </result>
+</GeocodeResponse>]]></con:responseContent>
+                <con:header>
+                    <con:name>X-Frame-Options</con:name>
+                    <con:value>SAMEORIGIN</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Cache-Control</con:name>
+                    <con:value>public, max-age=86400</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Server</con:name>
+                    <con:value>mafe</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Access-Control-Allow-Origin</con:name>
+                    <con:value>*</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Vary</con:name>
+                    <con:value>Accept-Language</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Expires</con:name>
+                    <con:value>Tue, 03 Nov 2015 10:54:00 GMT</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>X-XSS-Protection</con:name>
+                    <con:value>1; mode=block</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Date</con:name>
+                    <con:value>Mon, 02 Nov 2015 10:54:00 GMT</con:value>
+                </con:header>
+            </con:response>
+        </con:restMockAction>
+        <con:restMockAction name="/maps/api/geocode/json" method="GET" resourcePath="/maps/api/geocode/json" id="104d514b-6740-41ab-997c-23599b987cee">
+            <con:settings/>
+            <con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+            <con:dispatchConfig/>
+            <con:dispatchXPath/>
+            <con:response name="Response 1" id="7f9898d9-4683-4127-aaf3-b9bb714a0698" httpResponseStatus="200" mediaType="application/json" encoding="UTF-8" dataSource="">
+                <con:settings/>
+                <con:responseContent>{
+                    "results" : [
+                    {
+                    "address_components" : [
+                    {
+                    "long_name" : "1600",
+                    "short_name" : "1600",
+                    "types" : [ "street_number" ]
+                    },
+                    {
+                    "long_name" : "Amphitheatre Parkway",
+                    "short_name" : "Amphitheatre Pkwy",
+                    "types" : [ "route" ]
+                    },
+                    {
+                    "long_name" : "Mountain View",
+                    "short_name" : "Mountain View",
+                    "types" : [ "locality", "political" ]
+                    },
+                    {
+                    "long_name" : "Santa Clara County",
+                    "short_name" : "Santa Clara County",
+                    "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                    "long_name" : "California",
+                    "short_name" : "CA",
+                    "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                    "long_name" : "United States",
+                    "short_name" : "US",
+                    "types" : [ "country", "political" ]
+                    },
+                    {
+                    "long_name" : "94043",
+                    "short_name" : "94043",
+                    "types" : [ "postal_code" ]
+                    }
+                    ],
+                    "formatted_address" : "1600 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
+                    "geometry" : {
+                    "location" : {
+                    "lat" : 37.4220352,
+                    "lng" : -122.0841244
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                    "northeast" : {
+                    "lat" : 37.42338418029149,
+                    "lng" : -122.0827754197085
+                    },
+                    "southwest" : {
+                    "lat" : 37.4206862197085,
+                    "lng" : -122.0854733802915
+                    }
+                    }
+                    },
+                    "place_id" : "ChIJ2eUgeAK6j4ARbn5u_wAGqWA",
+                    "types" : [ "street_address" ]
+                    }
+                    ],
+                    "status" : "OK"
+                    }
+                </con:responseContent>
+                <con:header>
+                    <con:name>X-Frame-Options</con:name>
+                    <con:value>SAMEORIGIN</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Cache-Control</con:name>
+                    <con:value>public, max-age=86400</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Server</con:name>
+                    <con:value>mafe</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Access-Control-Allow-Origin</con:name>
+                    <con:value>*</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Vary</con:name>
+                    <con:value>Accept-Language</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Expires</con:name>
+                    <con:value>Tue, 03 Nov 2015 10:55:37 GMT</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>X-XSS-Protection</con:name>
+                    <con:value>1; mode=block</con:value>
+                </con:header>
+                <con:header>
+                    <con:name>Date</con:name>
+                    <con:value>Mon, 02 Nov 2015 10:55:37 GMT</con:value>
+                </con:header>
+            </con:response>
+        </con:restMockAction>
+    </con:restMockService>
+    <con:requirements/>
+    <con:properties/>
+    <con:wssContainer/>
+    <con:databaseConnectionContainer/>
+    <con:oAuth2ProfileContainer/>
+    <con:reporting>
+        <con:xmlTemplates/>
+        <con:parameters/>
+    </con:reporting>
+    <con:authRepository/>
+</con:soapui-project>
