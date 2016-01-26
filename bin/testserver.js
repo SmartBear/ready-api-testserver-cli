@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-console.log('rats 1.0.0');
+console.log('Ready! API TestServer Command-Line Interface 1.0.0');
 
 var fs = require("fs");
 var program = require('commander');
@@ -43,7 +43,7 @@ function sendXmlRequest(file) {
     .send( project )
     .end(function (err, res) {
       console.log("Response: " + res.status)
-      console.log("Got project response: " + JSON.stringify(res.body))
+      console.log("Got project response: " + JSON.stringify(res.body,null,2))
     })
 }
 
@@ -57,7 +57,7 @@ function sendRecipeRequest(file) {
     .send(recipe)
     .end(function (err, res) {
       console.log("Response: " + res.status)
-      console.log("Got response: " + JSON.stringify(res.body))
+      console.log("Got response: " + JSON.stringify(res.body,null,2))
     })
 }
 
