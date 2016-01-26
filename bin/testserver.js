@@ -8,10 +8,10 @@ var request = require('superagent');
 program
   .version('1.0.0')
   .usage('[options] <recipe ...>')
-  .option('-u, --username <usernam>', 'rats username')
-  .option('-p, --password <password>', 'rats password')
-  .option('-c, --config <config file>', 'config file (defaults to config.json)', 'config.json')
-  .option('-s, --server <server>', 'rats server endpoint')
+  .option('-u, --username <usernam>', 'Ready! API TestServer username')
+  .option('-p, --password <password>', 'Ready! API TestServer password')
+  .option('-c, --config <config file>', 'Config file (defaults to config.json)', 'config.json')
+  .option('-s, --server <server>', 'Ready! API TestServer endpoint')
   .parse(process.argv)
 
 if( program.args.length == 0 ){

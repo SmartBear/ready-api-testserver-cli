@@ -1,5 +1,5 @@
 {
-  "name": "ready-api-testerver-cli",
+  "name": "ready-api-testserver-cli",
   "version": "1.0.0",
   "description": "ReadyAPI TestServer Node Command-line client",
   "scripts": {
