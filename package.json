@@ -1,6 +1,6 @@
 {
   "name": "ready-api-testserver-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ReadyAPI TestServer Node Command-line client",
   "scripts": {
     "test": "no tests specified"
@@ -11,14 +11,14 @@
   "bin": {
     "testserver": "bin/testserver.js"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/olensmar/ready-api-testserver-cli.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olensmar/ready-api-testserver-cli.git"
   },
-  "bugs" : {
-    "url" : "https://github.com/olensmar/ready-api-testserver-cli/issues"
+  "bugs": {
+    "url": "https://github.com/olensmar/ready-api-testserver-cli/issues"
   },
-  "homepage" : "https://github.com/olensmar/ready-api-testserver-cli",
+  "homepage": "https://github.com/olensmar/ready-api-testserver-cli",
   "dependencies": {
     "commander": "^2.9.0",
     "superagent": "^1.6.1"
