@@ -1,17 +1,17 @@
 #! /usr/bin/env node
-console.log('Ready! API TestServer CLI 1.0.0');
+console.log('Ready! API TestServer Command-Line Interface 1.0.2');
 
 var fs = require("fs");
 var program = require('commander');
 var request = require('superagent');
 
 program
-  .version('1.0.0')
+  .version('1.0.2')
   .usage('[options] <recipe ...>')
-  .option('-u, --username <usernam>', 'testserver username')
-  .option('-p, --password <password>', 'testserver password')
-  .option('-c, --config <config file>', 'config file (defaults to config.json)', 'config.json')
-  .option('-s, --server <server>', 'testserver server endpoint')
+  .option('-u, --username <usernam>', 'Ready! API TestServer username')
+  .option('-p, --password <password>', 'Ready! API TestServer password')
+  .option('-c, --config <config file>', 'Config file (defaults to config.json)', 'config.json')
+  .option('-s, --server <server>', 'Ready! API TestServer endpoint')
   .parse(process.argv)
 
 if( program.args.length == 0 ){
@@ -20,7 +20,6 @@ if( program.args.length == 0 ){
 }
 
 var config = initConfig();
-console.log( "Using config: " + JSON.stringify(config))
 
 program.args.forEach(function (file) {
 
@@ -42,8 +41,8 @@ function sendXmlRequest(file) {
     .type( 'application/xml')
     .send( project )
     .end(function (err, res) {
-      console.log("Response: " + res.status)
-      console.log("Got project response: " + JSON.stringify(res.body))
+      console.log("HTTP Response: " + res.status)
+      console.log(JSON.stringify(res.body,null,2))
     })
 }
 
@@ -56,8 +55,8 @@ function sendRecipeRequest(file) {
     .auth(config.username, config.password)
     .send(recipe)
     .end(function (err, res) {
-      console.log("Response: " + res.status)
-      console.log("Got response: " + JSON.stringify(res.body))
+      console.log("HTTP Response: " + res.status)
+      console.log(JSON.stringify(res.body,null,2))
     })
 }
 
