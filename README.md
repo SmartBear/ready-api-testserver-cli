@@ -2,10 +2,6 @@
 
 A simple node-based command-line client for the [Ready!API TestServer](http://readyapi.smartbear.com/testserver/start)
 
-### Cucumber Support
-
-This sample provides a generic cucumber.js vocabulary for API testing, see the features folder for an example.
-
 
 ## Usage
 
@@ -81,3 +77,11 @@ Response: 200
 ...
 }
 ```
+
+### Cucumber Support
+
+This project includes a generic cucumber.js vocabulary for API testing that uses the Ready! API TestServer to 
+execute defined features. Simply run cucumber.js in the root folder which will detect the sample feature(s) in the
+features folder and run them. The actual supporting code for step definitions and required world/hook definitions
+are in the features/support folder.
+
