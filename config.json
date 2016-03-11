@@ -1,5 +1,5 @@
 {
-    "server"   : "http://testserver.readyapi.io:8080",
-    "username" : "demoUser",
-    "password" : "demoPassword"
+  "server"   : "http://testserver.readyapi.io:8080",
+  "username" : "demoUser",
+  "password" : "demoPassword"
 }
