@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-console.log('rats 1.0.0');
+console.log('Ready! API TestServer CLI 1.0.0');
 
 var fs = require("fs");
 var program = require('commander');
@@ -8,10 +8,10 @@ var request = require('superagent');
 program
   .version('1.0.0')
   .usage('[options] <recipe ...>')
-  .option('-u, --username <usernam>', 'rats username')
-  .option('-p, --password <password>', 'rats password')
+  .option('-u, --username <usernam>', 'testserver username')
+  .option('-p, --password <password>', 'testserver password')
   .option('-c, --config <config file>', 'config file (defaults to config.json)', 'config.json')
-  .option('-s, --server <server>', 'rats server endpoint')
+  .option('-s, --server <server>', 'testserver server endpoint')
   .parse(process.argv)
 
 if( program.args.length == 0 ){

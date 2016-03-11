@@ -11,16 +11,17 @@
   "bin": {
     "testserver": "bin/testserver.js"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/olensmar/ready-api-testserver-cli.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olensmar/ready-api-testserver-cli.git"
   },
-  "bugs" : {
-    "url" : "https://github.com/olensmar/ready-api-testserver-cli/issues"
+  "bugs": {
+    "url": "https://github.com/olensmar/ready-api-testserver-cli/issues"
   },
-  "homepage" : "https://github.com/olensmar/ready-api-testserver-cli",
+  "homepage": "https://github.com/olensmar/ready-api-testserver-cli",
   "dependencies": {
     "commander": "^2.9.0",
+    "cucumber": "^0.9.5",
     "superagent": "^1.6.1"
   }
 }

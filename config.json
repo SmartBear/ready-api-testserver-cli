@@ -1,5 +1,5 @@
 {
-    "server"   : "http://ready-api-test-server.swaggerhub31339dac46cf41e3.svc.tutum.io:8080",
-    "username" : "defaultUser",
-    "password" : "defaultPassword"
+    "server"   : "http://testserver.readyapi.io:8080",
+    "username" : "demoUser",
+    "password" : "demoPassword"
 }
