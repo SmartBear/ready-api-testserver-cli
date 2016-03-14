@@ -43,6 +43,52 @@ module.exports = function () {
 
   this.Then(/^the response body contains$/, function (bodyToken) {
     this.testStep.assertions.push( { type:"Contains", token:bodyToken})
+  });
 
+  /*
+   * SwaggerHub specific step definitions used by the swaggerhub-declarative.feature sample
+   */
+
+  this.When(/^a request to the API listing is made$/, function () {
+
+    var uri = "https://api.swaggerhub.com/apis"
+    if( this.owner ){
+      uri += "/" + this.owner
+    }
+
+    if( this.api ){
+      uri += "/" + this.api
+    }
+
+    if( this.version ){
+      uri += "/" + this.version
+    }
+
+    this.testStep.URI = uri
+    this.testStep.method = "GET"
+  });
+
+  this.Given(/^an owner named (.*)$/, function (owner) {
+    this.owner = owner
+  });
+
+  this.Given(/^an api named (.*)$/, function (api) {
+    this.api = api
+  });
+
+  this.Given(/^a version named (.*)$/, function (version) {
+    this.version = version
+  });
+
+  this.Then(/^a list of APIs should be returned within (\d+)ms$/, function (timeout) {
+    this.testStep.assertions.push( { type:"Valid HTTP Status Codes", validStatusCodes:[200]})
+    this.testStep.assertions.push( { type:"Response SLA", maxResponseTime:timeout})
+    this.testStep.assertions.push( { type:"XPath Match", expectedContent:"true", xpath:"//*[local-name()='totalCount'] > 0"})
+  });
+
+  this.Then(/^an API definition should be returned within (\d+)ms$/, function (timeout) {
+    this.testStep.assertions.push( { type:"Valid HTTP Status Codes", validStatusCodes:[200]})
+    this.testStep.assertions.push( { type:"Response SLA", maxResponseTime:timeout})
+    this.testStep.assertions.push( { type:"JsonPath Match", expectedContent:"2.0", jsonPath:"$.swagger"})
   });
 }
