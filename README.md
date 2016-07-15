@@ -17,11 +17,12 @@ Run with
 testserver -u <username> -p <password> -s <testserver-endpoint> recipe/project file
 ```
 
-which will execute the specified recipe or project file and print the results to the console, for example
+which will execute the specified recipe or project file (or folder for composite projects)
+and print the results to the console, for example
 
 ```
 127:ready-api-testserver-cli ole$ testserver -u XXX -p YYY -s http://<testserver-host>:8080 recipes/simple-test-recipe.json
-Ready! API TestServer Command-Line Interface 1.0.2
+Ready! API TestServer Command-Line Interface 1.0.3
 Response: 200
 {
     "projectName": "Recipe REST Project",
@@ -70,7 +71,7 @@ folder. The above invocation would now just be
 
 ```
 127:ready-api-testserver-cli ole$ testserver recipes/simple-test-recipe.json
-Ready! API TestServer Command-Line Interface 1.0.2
+Ready! API TestServer Command-Line Interface 1.0.3
 Reading config from config.json
 Response: 200
 {
