@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/olensmar/ready-api-testserver-cli.git"
+    "url": "https://github.com/readyapi/ready-api-testserver-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/olensmar/ready-api-testserver-cli/issues"
+    "url": "https://github.com/readyapi/ready-api-testserver-cli/issues"
   },
-  "homepage": "https://github.com/olensmar/ready-api-testserver-cli",
+  "homepage": "https://github.com/readyapi/ready-api-testserver-cli",
   "dependencies": {
     "commander": "^2.9.0",
     "cucumber": "^0.9.5",
