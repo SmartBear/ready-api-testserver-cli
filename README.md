@@ -1,3 +1,7 @@
+## Deprecated
+
+This project has been deprecated. If you need a cli client for testengine consider using the more up to date [testengine-cli](https://www.npmjs.com/package/testengine-cli)
+
 ## Ready API Test Server CLI
 
 A simple node-based command-line client for the [Ready!API TestServer](http://readyapi.smartbear.com/testserver/start)
